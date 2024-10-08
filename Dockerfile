@@ -18,4 +18,5 @@ COPY package.json package.json
 RUN npm i --omit=dev
 COPY public public
 COPY src src
+COPY index.js index.js
 CMD node index.js    
