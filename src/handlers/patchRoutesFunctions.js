@@ -1,4 +1,4 @@
-const database = require("../../database");
+const database = require("../database");
 
 const patchVideoById = (req, res) => {
 	const id = Number.parseInt(req.params.id, 10);

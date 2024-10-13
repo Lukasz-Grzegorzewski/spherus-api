@@ -9,7 +9,7 @@ FROM node:18.18.2-alpine3.18 AS dev
 WORKDIR /app
 COPY --from=deps /app/node_modules node_modules 
 COPY . .
-CMD node migrate.js && npm run dev
+CMD node src/migrate.js && npm run dev
 
 # this step launch the app in a prod mode, with only js files and useful deps
 FROM node:18.18.2-alpine3.18 AS prod
@@ -18,7 +18,4 @@ COPY package.json package.json
 RUN npm i --omit=dev
 COPY public public
 COPY src src
-COPY migrate.js migrate.js
-COPY database.js database.js
-COPY index.js index.js
-CMD node index.js    
+CMD node src/index.js    

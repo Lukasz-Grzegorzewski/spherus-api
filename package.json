@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
-    "migrate": "node migrate.js",
-    "start": "node index.js",
+    "dev": "nodemon src/index.js",
+    "migrate": "node src/migrate.js",
+    "start": "node src/index.js",
     "test": "jest",
     "biome:lint": "biome lint ./src",
     "biome:format": "biome format ./src --write",

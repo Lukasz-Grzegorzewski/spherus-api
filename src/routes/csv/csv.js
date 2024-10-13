@@ -1,5 +1,5 @@
 const DataExporter = require("json2csv").Parser;
-const database = require("../../../database");
+const database = require("../../database");
 
 const getCsv = (req, res) => {
 	database

@@ -1,6 +1,6 @@
 const fs = require("node:fs");
 
-const database = require("../../database");
+const database = require("../database");
 
 /* POST USER */
 const signInUserByUser = (req, res) => {

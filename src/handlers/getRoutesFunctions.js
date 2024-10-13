@@ -1,4 +1,4 @@
-const database = require("../../database");
+const database = require("../database");
 
 /* WELCOME MESSAGE */
 const welcome = (req, res) => {

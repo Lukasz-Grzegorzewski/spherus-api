@@ -1,5 +1,5 @@
 const fs = require("node:fs");
-const database = require("../../database");
+const database = require("../database");
 
 const deleteUserById = (req, res) => {
 	const id = Number.parseInt(req.params.id, 10);

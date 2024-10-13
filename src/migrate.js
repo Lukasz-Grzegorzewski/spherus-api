@@ -1,5 +1,6 @@
 require("dotenv").config();
 const fs = require("node:fs");
+const path = require("node:path");
 const mysql = require("mysql2/promise");
 
 const migrate = async () => {
@@ -16,7 +17,8 @@ const migrate = async () => {
 	await connection.query(`CREATE DATABASE \`${MYSQL_DATABASE}\``);
 	await connection.query(`USE \`${MYSQL_DATABASE}\``);
 
-	const sql = fs.readFileSync("./ODW_DB.sql", "utf8");
+	const sql = fs.readFileSync(path.join(__dirname, "ODW_DB.sql"), "utf8");
+
 	await connection.query(sql);
 	connection.end();
 };
