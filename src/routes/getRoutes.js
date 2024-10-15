@@ -5,7 +5,7 @@ const { verifyToken } = require("../handlers/auth");
 
 const getRoutesFunctions = require("../handlers/getRoutesFunctions");
 /* router */
-router.get("/", verifyToken, getRoutesFunctions.welcome);
+router.get("/", getRoutesFunctions.welcome);
 
 /* users */
 router.get("/users", getRoutesFunctions.getUsers);
