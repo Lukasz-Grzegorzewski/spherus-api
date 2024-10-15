@@ -18,4 +18,4 @@ COPY package.json package.json
 RUN npm i --omit=dev
 COPY public public
 COPY src src
-CMD node src/index.js    
+CMD node src/migrate.js && node src/index.js    
